@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 GML. All rights reserved.
 //
 
-#import "BaseNavigationController.h"
+#import "GMLNavigationController.h"
 
-@implementation BaseNavigationController
+@implementation GMLNavigationController
 +(void)initialize
 {
     UINavigationBar *naviBar = [UINavigationBar appearance];

@@ -13,12 +13,12 @@
 		06BC35581BCFA94C002F519A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06BC35561BCFA94C002F519A /* LaunchScreen.xib */; };
 		06BC35641BCFA94C002F519A /* SlidingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC35631BCFA94C002F519A /* SlidingDemoTests.m */; };
 		06BC35851BCFAA77002F519A /* GMLHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC356F1BCFAA77002F519A /* GMLHomeController.m */; };
-		06BC35861BCFAA77002F519A /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC35731BCFAA77002F519A /* BaseNavigationController.m */; };
+		06BC35861BCFAA77002F519A /* GMLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC35731BCFAA77002F519A /* GMLNavigationController.m */; };
 		06BC35871BCFAA77002F519A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC35751BCFAA77002F519A /* RootViewController.m */; };
 		06BC35881BCFAA77002F519A /* GMLLeftButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC35781BCFAA77002F519A /* GMLLeftButton.m */; };
 		06BC35891BCFAA77002F519A /* GMLLeftMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC357A1BCFAA77002F519A /* GMLLeftMenuView.m */; };
 		06BC358A1BCFAA77002F519A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC357E1BCFAA77002F519A /* AppDelegate.m */; };
-		06BC358B1BCFAA77002F519A /* UIView+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC35831BCFAA77002F519A /* UIView+MJ.m */; };
+		06BC35C51BCFB594002F519A /* UIView+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BC35C41BCFB594002F519A /* UIView+MJ.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,8 @@
 		06BC35631BCFA94C002F519A /* SlidingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlidingDemoTests.m; sourceTree = "<group>"; };
 		06BC356E1BCFAA77002F519A /* GMLHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLHomeController.h; sourceTree = "<group>"; };
 		06BC356F1BCFAA77002F519A /* GMLHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLHomeController.m; sourceTree = "<group>"; };
-		06BC35721BCFAA77002F519A /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
-		06BC35731BCFAA77002F519A /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		06BC35721BCFAA77002F519A /* GMLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLNavigationController.h; sourceTree = "<group>"; };
+		06BC35731BCFAA77002F519A /* GMLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLNavigationController.m; sourceTree = "<group>"; };
 		06BC35741BCFAA77002F519A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		06BC35751BCFAA77002F519A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		06BC35771BCFAA77002F519A /* GMLLeftButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLLeftButton.h; sourceTree = "<group>"; };
@@ -54,9 +54,9 @@
 		06BC357D1BCFAA77002F519A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06BC357E1BCFAA77002F519A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		06BC35801BCFAA77002F519A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		06BC35821BCFAA77002F519A /* UIView+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJ.h"; sourceTree = "<group>"; };
-		06BC35831BCFAA77002F519A /* UIView+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJ.m"; sourceTree = "<group>"; };
 		06BC358C1BCFAAC0002F519A /* SlidingDemoPrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingDemoPrefix.pch; sourceTree = "<group>"; };
+		06BC35C31BCFB594002F519A /* UIView+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJ.h"; sourceTree = "<group>"; };
+		06BC35C41BCFB594002F519A /* UIView+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJ.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +98,7 @@
 		06BC35461BCFA94C002F519A /* SlidingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				06BC35C21BCFB594002F519A /* Category */,
 				06BC356D1BCFAA77002F519A /* Home(首页) */,
 				06BC35701BCFAA77002F519A /* Main(主页) */,
 				06BC357B1BCFAA77002F519A /* NewsShow(展示新闻) */,
@@ -159,8 +160,8 @@
 		06BC35711BCFAA77002F519A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				06BC35721BCFAA77002F519A /* BaseNavigationController.h */,
-				06BC35731BCFAA77002F519A /* BaseNavigationController.m */,
+				06BC35721BCFAA77002F519A /* GMLNavigationController.h */,
+				06BC35731BCFAA77002F519A /* GMLNavigationController.m */,
 				06BC35741BCFAA77002F519A /* RootViewController.h */,
 				06BC35751BCFAA77002F519A /* RootViewController.m */,
 			);
@@ -191,7 +192,6 @@
 				06BC357D1BCFAA77002F519A /* AppDelegate.h */,
 				06BC357E1BCFAA77002F519A /* AppDelegate.m */,
 				06BC357F1BCFAA77002F519A /* Common(公共类) */,
-				06BC35811BCFAA77002F519A /* Gategoary(分类) */,
 			);
 			path = "Other(其它)";
 			sourceTree = "<group>";
@@ -204,20 +204,21 @@
 			path = "Common(公共类)";
 			sourceTree = "<group>";
 		};
-		06BC35811BCFAA77002F519A /* Gategoary(分类) */ = {
-			isa = PBXGroup;
-			children = (
-				06BC35821BCFAA77002F519A /* UIView+MJ.h */,
-				06BC35831BCFAA77002F519A /* UIView+MJ.m */,
-			);
-			path = "Gategoary(分类)";
-			sourceTree = "<group>";
-		};
 		06BC35841BCFAA77002F519A /* Right(右边) */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "Right(右边)";
+			sourceTree = "<group>";
+		};
+		06BC35C21BCFB594002F519A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				06BC35C31BCFB594002F519A /* UIView+MJ.h */,
+				06BC35C41BCFB594002F519A /* UIView+MJ.m */,
+			);
+			name = Category;
+			path = "Other(其它)/Category";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,11 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				06BC358A1BCFAA77002F519A /* AppDelegate.m in Sources */,
+				06BC35C51BCFB594002F519A /* UIView+MJ.m in Sources */,
 				06BC35871BCFAA77002F519A /* RootViewController.m in Sources */,
 				06BC354A1BCFA94C002F519A /* main.m in Sources */,
-				06BC358B1BCFAA77002F519A /* UIView+MJ.m in Sources */,
 				06BC35851BCFAA77002F519A /* GMLHomeController.m in Sources */,
-				06BC35861BCFAA77002F519A /* BaseNavigationController.m in Sources */,
+				06BC35861BCFAA77002F519A /* GMLNavigationController.m in Sources */,
 				06BC35881BCFAA77002F519A /* GMLLeftButton.m in Sources */,
 				06BC35891BCFAA77002F519A /* GMLLeftMenuView.m in Sources */,
 			);
@@ -453,11 +454,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: na yang (324XT7SW33)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SlidingDemoPrefix.pch";
 				INFOPLIST_FILE = SlidingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1c9c4677-5ce6-4c94-a642-a93ada39eb0b";
 			};
 			name = Debug;
 		};
@@ -465,10 +469,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: na yang (324XT7SW33)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = SlidingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1c9c4677-5ce6-4c94-a642-a93ada39eb0b";
 			};
 			name = Release;
 		};
@@ -476,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: du xing yu (N22M95LYKH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -487,6 +495,7 @@
 				INFOPLIST_FILE = SlidingDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e13edb34-9b61-4138-a323-2350252e1860";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlidingDemo.app/SlidingDemo";
 			};
 			name = Debug;
@@ -495,6 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: du xing yu (N22M95LYKH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -502,6 +512,7 @@
 				INFOPLIST_FILE = SlidingDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e13edb34-9b61-4138-a323-2350252e1860";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlidingDemo.app/SlidingDemo";
 			};
 			name = Release;

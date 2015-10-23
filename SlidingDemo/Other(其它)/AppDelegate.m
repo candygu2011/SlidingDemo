@@ -18,16 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-//    UIApplication *app = [UIApplication sharedApplication];
-//    app.statusBarStyle = UIStatusBarStyleLightContent;
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.backgroundColor = [UIColor clearColor];
-//    [self.window makeKeyAndVisible];
-//    
-//    //
-//    RootViewController *rootVC = [[RootViewController alloc] init];
-//    self.window.rootViewController = rootVC;
-    
+
     return YES;
 }
 

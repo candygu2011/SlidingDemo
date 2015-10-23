@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 #import "GMLLeftMenuView.h"
-#import "BaseNavigationController.h"
+#import "GMLNavigationController.h"
 //覆盖层按钮的tag
 #define buttonTag 1200
 @interface RootViewController ()<GMLLeftMenuViewDelegate>
@@ -18,9 +18,12 @@
 //左边菜单栏
 @property (nonatomic,weak)  GMLLeftMenuView *leftMenuView;
 //当前显示的控制器
-@property (nonatomic,strong) BaseNavigationController *showNavController;
+@property (nonatomic,strong) GMLNavigationController *showNavController;
 
 @property (nonatomic,strong) UISwipeGestureRecognizer *leftSwipeGesture;
+// 拖动手势
+@property (nonatomic,strong) UIPanGestureRecognizer *panGestureRecoginze;
+@property (nonatomic,assign) CGPoint panGestureStartLocation;
 
 
 @end
@@ -32,6 +35,10 @@
     self.leftSwipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
     self.leftSwipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:self.leftSwipeGesture];
+    
+    self.panGestureRecoginze = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecoginze:)];
+//    [self.view addGestureRecognizer:self.panG estureRecoginze];
+    
     [self addBackgroundImage];
     [self setupLeftMenu];
     [self addChildControllers];
@@ -85,7 +92,7 @@
     if (self.childViewControllers.count >= 1) {
         subVC.view.backgroundColor = GMLRandomColor;
     }
-    BaseNavigationController *navi = [[BaseNavigationController alloc] initWithRootViewController:subVC];
+    GMLNavigationController *navi = [[GMLNavigationController alloc] initWithRootViewController:subVC];
     subVC.title = title;
     subVC.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(leftClick:)];
     subVC.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"right" style:UIBarButtonItemStylePlain target:self action:@selector(rightClick:)];
@@ -152,10 +159,10 @@
 
 -(void)leftMenu:(GMLLeftMenuView *)leftMenu didSelectedFrom:(NSInteger)from to:(NSInteger)to
 {
-    BaseNavigationController *lastNavi = self.childViewControllers[from];
+    GMLNavigationController *lastNavi = self.childViewControllers[from];
     [lastNavi.view removeFromSuperview];
     
-    BaseNavigationController *navi = self.childViewControllers[to];
+    GMLNavigationController *navi = self.childViewControllers[to];
     navi.view.transform = lastNavi.view.transform;
     [self.view addSubview:navi.view];
     self.showNavController = navi;
@@ -170,6 +177,48 @@
     }else if (swipe.direction == UISwipeGestureRecognizerDirectionLeft){
         
     }
+}
+
+- (void)panGestureRecoginze:(UIPanGestureRecognizer *)pan
+{
+    NSLog(@" pan.state = %f", [pan translationInView:self.view].x);
+    CGPoint location = [pan locationInView:self.view];
+    CGRect showNavOriginFrame = self.showNavController.view.frame;
+//    CGAffineTransform scaleform = CGAffineTransformMakeScale(0.9, 0.9);
+//    CGAffineTransform animation = CGAffineTransformTranslate(scaleform, -80, 0);
+//    self.leftMenuView.transform = animation;
+    
+    CGRect c = self.view.frame;
+    CGAffineTransform scaleForm = CGAffineTransformMakeScale(1, 1);
+    CGAffineTransform animation = CGAffineTransformTranslate(scaleForm, -80, 0);
+    self.leftMenuView.transform = animation;
+    
+    switch (pan.state) {
+        case UIGestureRecognizerStateBegan:
+//            self.panGestureStartLocation =  location;
+            self.leftMenuView.hidden = NO;
+            [self.view bringSubviewToFront:self.leftMenuView];
+
+            break;
+        case UIGestureRecognizerStateChanged:
+            if ([pan translationInView:self.view].x > 0) {
+                CGFloat wScale = [pan translationInView:self.view].x / self.view.bounds.size.width;
+                CGAffineTransform scaleForm = CGAffineTransformMakeScale(wScale, wScale);
+                CGAffineTransform animation1 = CGAffineTransformTranslate(scaleForm,[pan translationInView:self.view].x-self.view.bounds.size.width , 0);
+                self.leftMenuView.transform = animation1;
+                    CGAffineTransform animation = CGAffineTransformTranslate(scaleForm,self.view.bounds.size.width-[pan translationInView:self.view].x , 0);
+                self.showNavController.view.transform = animation;
+
+            }else if ([pan translationInView:self.view].x > -200){
+
+            }
+            self.view.frame = c;
+            break;
+
+        default:
+            break;
+    }
+    
 }
 
 @end
